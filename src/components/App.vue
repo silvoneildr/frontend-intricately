@@ -29,12 +29,13 @@ export default {
   .container {
     width: 100vw;
     flex: 1;
+    background: $color-gray
   }
   .content {
+    margin-top: 30px;
     display: flex;
-    padding: 0 15vw;
+    padding: 0 18vw;
     flex-direction: row;
     height: 100vh;
-    background: $color-white;
   }
 </style>

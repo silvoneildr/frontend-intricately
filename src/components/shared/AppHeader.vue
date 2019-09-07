@@ -8,7 +8,7 @@
   header {
     @include flexCenter();
     width: 100vw;
-    height: 80px;
+    height: 73px;
     background: $color-primary;
     color: $color-white;
   }
