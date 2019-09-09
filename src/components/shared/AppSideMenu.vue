@@ -1,18 +1,35 @@
 <template lang="pug">
   .side-menu
     .menu
-      .item-menu COMPANY DATA
+      .item-menu(
+        @click="handlePage('the-company-data')"
+      ) COMPANY DATA
       .item-menu COMPANY TABLE
-      .item-menu COMPANY PAGE
+      .item-menu(
+        @click="handlePage('the-company-page')"
+      ) COMPANY PAGE
 
 </template>
 
+<script>
+export default {
+  methods: {
+    handlePage(newRoute) {
+      if (this.$route && this.$router.history.current.meta.menu) {
+        const activeRoute = this.$router.history.current.meta.menu
+        if (newRoute !== activeRoute) {
+          this.$router.push({
+            name: newRoute,
+          });
+        }
+      }
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
   @import 'Styles/main.scss';
-  .side-menu {
-    flex: 1;
-    padding: 15px;
-  }
   .menu {
     font-size: $font-size-normal;
     text-align: left;

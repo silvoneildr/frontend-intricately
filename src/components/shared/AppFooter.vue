@@ -6,6 +6,7 @@
 <style lang="scss" scoped>
   @import 'Styles/main.scss';
   footer {
+    height: 10vh;
     position: fixed;
     left: 0;
     bottom: 0;

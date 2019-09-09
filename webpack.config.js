@@ -33,7 +33,7 @@ module.exports = {
       Mixins: path.resolve(__dirname, 'src', 'mixins')
     }
   },
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: path.resolve(__dirname, 'src', 'main.js'),
   output: {
     filename: isProduction() ? 'assets/main.[contenthash].js' : 'assets/main.js',
     path: path.resolve(__dirname, 'build'),
@@ -98,7 +98,7 @@ module.exports = {
       filename: isProduction() ? 'assets/style.[contenthash].css' : 'assets/style.css'
     }),
     new HtmlWebpackPlugin({
-      template: 'src/index.pug'
+      template: './index.pug'
     }),
     new webpack.DefinePlugin({
       'process.env': {
