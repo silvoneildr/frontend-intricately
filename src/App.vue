@@ -37,7 +37,10 @@ export default {
   .content {
     display: flex;
     flex-direction: column;
-    padding: 50px 18vw;
+    padding: 20px 18vw;
+  }
+  .breadcrumbs {
+    padding: 20px;
   }
   .main {
     display: flex;

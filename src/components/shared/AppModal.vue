@@ -9,16 +9,6 @@
               class="close rounded"
               @click="closeModal()",
             )
-            //- button.btn(
-            //-   type="text",
-            //-   @click="closeModal()",
-            //-   @mouseover.native="hover",
-            //-   @mouseout.native="leave",
-            //-   :style="getColor",
-            //-   size="mini"
-            //- )
-              i.material-icons.icon close
-
           .modal-body
             slot(name="body")
           .modal-footer
@@ -48,18 +38,9 @@ export default {
 
   methods: {
     closeModal() {
-      this.$emit('closeModal');
-    },
-
-    hover() {
-      this.colorCopy = this.hoverColor;
-    },
-
-    leave() {
-      this.colorCopy = this.cor;
+      this.$store.commit(`companyData/CHANGE_MODAL_NOTES`,  false);
     },
   },
-
 };
 
 </script>
